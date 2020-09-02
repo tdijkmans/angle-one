@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="container">
+  <app-add-todo class="container" (addTodo)="addTodo($event)"></app-add-todo>
+  <div class="container">
+    <app-todo-item
+      *ngFor="let todo of todos"
+      class="list-group"
+      [todo]="todo"
+      (deleteTodo)="deleteTodo($event)"
+    >
+    </app-todo-item>
+  </div>
+</div>
